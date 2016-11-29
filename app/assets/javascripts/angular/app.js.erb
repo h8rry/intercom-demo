@@ -20,15 +20,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 }]);
 
 app.run(['$cookies', '$rootScope', '$location', function($cookies, $rootScope, $location){
-  // $rootScope.$watch(function() {
-  //   return $location.path();
-  // }, function(){
-  //   window.Intercom('shutdown');
-  //
-  //   setTimeout(function(){
-  //     window.Intercom('boot', {
-  //       app_id: <%= "'#{ENV['INTERCOM_APP_ID']}'" %>
-  //     });
-  //   }, 3000);
-  // });
+  window.Intercom('boot', {
+    app_id: 'dv8y6ve8'
+  });
 }]);
