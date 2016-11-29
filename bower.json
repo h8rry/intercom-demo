@@ -7,6 +7,13 @@
   "main": "",
   "license": "MIT",
   "homepage": "",
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "bootstrap-sass": "~3.3.6",
+    "bootstrap": "~3.3.6",
+    "angular-cookies": "~1.4.8"
+  },
   "ignore": [
     "**/.*",
     "node_modules",

@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="intercom-demo">
   <head>
     <title>IntercomDemo</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+
+    <base href="/">
   </head>
 
-  <body>
+  <body ng-view>
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,34 @@
+'use strict';
+
+var app = angular.module('intercom-demo', ['ngRoute', 'ngCookies']);
+
+app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+  $routeProvider.
+    when('/', {
+      templateUrl: "<%= asset_path('index.html') %>",
+      controller: 'IndexCtrl'
+    }).
+    when('/users', {
+      templateUrl: "<%= asset_path('users.html') %>",
+      controller: 'UsersCtrl'
+    }).
+    otherwise({
+      redirectTo: '/'
+    });
+
+  $locationProvider.html5Mode(true);
+}]);
+
+app.run(['$cookies', '$rootScope', '$location', function($cookies, $rootScope, $location){
+  // $rootScope.$watch(function() {
+  //   return $location.path();
+  // }, function(){
+  //   window.Intercom('shutdown');
+  //
+  //   setTimeout(function(){
+  //     window.Intercom('boot', {
+  //       app_id: <%= "'#{ENV['INTERCOM_APP_ID']}'" %>
+  //     });
+  //   }, 3000);
+  // });
+}]);
